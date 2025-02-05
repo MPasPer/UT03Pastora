@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9DF0A0"
+    tools:context=".MainActivityConversor">
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/txtAsignatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Programación multimedia y dispositivos móviles"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/txtEjercicio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ejercicio 1 - Conversor de Monedas"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAsignatura" />
+
+    <!-- Entrada de cantidad -->
+    <EditText
+        android:id="@+id/etnCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEjercicio1" />
+
+    <!-- Grupo de botones de conversión -->
+    <RadioGroup
+        android:id="@+id/rdgconversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etnCantidad">
+
+        <RadioButton
+            android:id="@+id/rbtEuroDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euros a Dólares"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/rbtDolarEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dólares a Euros"
+            android:textColor="@color/black" />
+    </RadioGroup>
+
+    <!-- Entrada del cambio -->
+
+    <!-- Resultado -->
+
+    <EditText
+        android:id="@+id/etnCambio"
+        android:layout_width="174dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:hint="1.00000"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rdgconversion"
+        app:layout_constraintTop_toTopOf="@+id/rdgconversion" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="0.00"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdgconversion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
